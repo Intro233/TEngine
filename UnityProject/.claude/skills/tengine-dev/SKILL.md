@@ -31,5 +31,3 @@ TEngine 是基于 HybridCLR + YooAsset + UniTask + Luban 的 Unity 游戏框架�
 | Luban 配置 | [luban-config.md](references/luban-config.md) | — | P1 |
 | 项目结构 | [architecture.md](references/architecture.md) | — | P2 |
 | 问题排查 | [troubleshooting.md](references/troubleshooting.md) | — | P2 |
-| MCP 场景/GO/UI/脚本/Editor | [mcp-tools.md](references/mcp-tools.md) | — | P1 |
-| MCP 材质/Shader/动画/VFX | [mcp-visual.md](references/mcp-visual.md) | — | P2 |

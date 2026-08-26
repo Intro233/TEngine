@@ -97,8 +97,6 @@ TEngine 基于 HybridCLR + YooAsset + UniTask + Luban 构建。
 | ui-patterns.md | UI 进阶（Widget 模板/节点绑定）| 进阶 |
 | event-antipatterns.md | 事件避坑（内存泄漏/接口无响应/风暴）| 进阶 |
 | resource-patterns.md | 资源管理模式/生命周期/泄漏根因 | 进阶 |
-| mcp-tools.md | MCP 场景/GameObject/UI Prefab/脚本/Editor/测试 | MCP |
-| mcp-visual.md | MCP 材质/Shader/VFX/动画 | MCP |
 | troubleshooting.md | 问题排查 | 排障 |
 
 ---

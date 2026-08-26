@@ -76,7 +76,6 @@ memory: project
 - **代码规范/命名** → `conventions.md`
 - **架构/启动流程** → `architecture.md`
 - **问题排查** → `troubleshooting.md`
-- **Unity Editor 自动化** → `unity-mcp-guide.md`、`ui-prefab-builder.md`、`scene-gameobject.md`、`script-asset-workflow.md`
 
 ## 质量保证机制
 

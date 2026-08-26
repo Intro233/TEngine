@@ -9,9 +9,6 @@
 - [UIComponentInspectorEditor.cs](file://Assets/Editor/UIScriptGenerator/UIComponentInspectorEditor.cs)
 - [UIBindComponent.cs](file://Assets/GameScripts/HotFix/GameLogic/Module/UIModule/UIBindComponent/UIBindComponent.cs)
 - [UIComponentEditor.cs](file://Assets/GameScripts/HotFix/GameLogic/Module/UIModule/UIBindComponent/UIComponentEditor.cs)
-- [HtmlToUGUIBaker.cs](file://Assets/HtmlToUGUI/Editor/HtmlToUGUIBaker.cs)
-- [HtmlToUGUIConfig.cs](file://Assets/HtmlToUGUI/HtmlToUGUIConfig.cs)
-- [HtmlToUGUIConfig.asset](file://Assets/HtmlToUGUI/HtmlToUGUIConfig.asset)
 </cite>
 
 ## 目录
@@ -35,7 +32,6 @@ UI脚本生成器是TEngine框架中的一个重要工具集，旨在自动化�
 - **灵活的组件映射**：支持多种UGUI组件的智能识别和绑定
 - **统一的命名规范**：提供一致的变量命名和代码风格
 - **事件绑定机制**：自动生成按钮点击、滑块变化等事件处理代码
-- **多分辨率支持**：通过HTML到UGUI烘焙器支持不同屏幕尺寸
 
 ## 项目结构
 
@@ -54,19 +50,12 @@ subgraph "运行时组件层"
 F[UIBindComponent.cs]
 G[UIComponentEditor.cs]
 end
-subgraph "HTML到UGUI工具"
-H[HtmlToUGUIBaker.cs]
-I[HtmlToUGUIConfig.cs]
-J[HtmlToUGUIConfig.asset]
-end
 A --> F
 B --> F
 C --> A
 C --> B
 D --> C
 E --> F
-H --> I
-I --> J
 ```
 
 **图表来源**
@@ -322,17 +311,12 @@ end
 subgraph "运行时层"
 F[UIBindComponent]
 end
-subgraph "工具层"
-G[HtmlToUGUIBaker]
-H[HtmlToUGUIConfig]
-end
 A --> C
 A --> D
 B --> A
 E --> F
 C --> F
 D --> F
-G --> H
 ```
 
 **图表来源**
@@ -428,22 +412,7 @@ UI脚本生成器系统通过精心设计的架构和完善的工具链，为Uni
 
 ### 使用指南
 
-#### 1. HTML到UGUI烘焙流程
-```mermaid
-flowchart TD
-A[创建HTML设计] --> B[生成JSON坐标数据]
-B --> C[配置HtmlToUGUIConfig]
-C --> D[选择目标Canvas]
-D --> E[执行烘焙生成]
-E --> F[生成UGUI界面树]
-F --> G[自动适配分辨率]
-```
-
-**图表来源**
-- [HtmlToUGUIBaker.cs:315-370](file://Assets/HtmlToUGUI/Editor/HtmlToUGUIBaker.cs#L315-L370)
-- [HtmlToUGUIConfig.cs:20-35](file://Assets/HtmlToUGUI/HtmlToUGUIConfig.cs#L20-L35)
-
-#### 2. 脚本生成完整工作流
+#### 1. 脚本生成完整工作流
 ```mermaid
 sequenceDiagram
 participant Designer as 设计师
@@ -457,7 +426,7 @@ Generator->>Runtime : 生成绑定代码
 Runtime-->>Designer : 提供组件访问接口
 ```
 
-#### 3. 配置选项说明
+#### 2. 配置选项说明
 
 | 配置项 | 类型 | 默认值 | 描述 |
 |--------|------|--------|------|
@@ -469,4 +438,3 @@ Runtime-->>Designer : 提供组件访问接口
 
 **章节来源**
 - [ScriptGeneratorSetting.cs:31-56](file://Assets/Editor/UIScriptGenerator/ScriptGeneratorSetting.cs#L31-L56)
-- [HtmlToUGUIBaker.cs:64-122](file://Assets/HtmlToUGUI/Editor/HtmlToUGUIBaker.cs#L64-L122)

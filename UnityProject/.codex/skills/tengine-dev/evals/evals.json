@@ -224,22 +224,6 @@
       ]
     },
     {
-      "id": 14,
-      "name": "mcp-create-ui-script",
-      "description": "验证 AI 能正确使用 MCP manage_script 工具创建 UIWindow C# 脚本，路径指向 HotFix/GameLogic/UI 目录，包含 [Window(] 特性，不使用 manage_asset 或 manage_gameobject 处理脚本。",
-      "prompt": "用 MCP 工具帮我创建一个 BattleMainUI 的 UIWindow C# 脚本，放在正确的路径下。",
-      "expected_patterns": [
-        "manage_script",
-        "action.*create",
-        "GameScripts/HotFix/GameLogic/UI",
-        "[Window("
-      ],
-      "forbidden_patterns": [
-        "manage_asset",
-        "manage_gameobject"
-      ]
-    },
-    {
       "id": 15,
       "name": "aot-generic-supplement",
       "description": "验证 AI 能正确诊断 HybridCLR AOT 泛型缺失问题，指向 AOTGenericReferences 和 HybridCLR Generate 操作，不建议使用 dynamic 或 Emit 等不支持的特性。",
@@ -287,24 +271,6 @@
       ],
       "forbidden_patterns": [
         "LoadGameObjectAsync(\"BossPrefab\")"
-      ]
-    },
-    {
-      "id": 18,
-      "name": "mcp-create-material",
-      "description": "验证 AI 能正确使用 MCP manage_material 工具创建 URP 材质，使用正确的 URP Shader 名称（Universal Render Pipeline/Lit）和颜色属性（_BaseColor），不误用 manage_script 处理材质或使用 _Color 作为 URP 颜色属性。",
-      "prompt": "用 MCP 工具帮我为角色模型（HeroModel）创建一个蓝色的 URP Lit 材质，保存到 Assets/AssetRaw/Materials/ 目录，并赋给该模型。",
-      "expected_patterns": [
-        "manage_material",
-        "Universal Render Pipeline/Lit",
-        "_BaseColor",
-        "assign_material_to_renderer",
-        "HeroModel"
-      ],
-      "forbidden_patterns": [
-        "manage_script",
-        "\"_Color\"",
-        "Standard"
       ]
     }
   ]

@@ -97,8 +97,6 @@ TEngine 深度集成了一套面向 Claude Code 的 AI 辅助开发工作流。�
 | 工具 | 用途 |
 |------|------|
 | **tengine-dev** | Claude Code 专用 TEngine 开发技能，从 `references/` 提供全模块规范 |
-| **Unity-MCP** | Unity Editor 自动化操作（场景、资源、脚本） |
-| **openspec** | 规范驱动的变更管理 |
 | **wiki-synchelper** | Wiki 文档同步助手（手动触发时使用） |
 
 ---
@@ -284,7 +282,7 @@ sequenceDiagram
 | [🏗️ 框架概览](Books/2-框架概览.md) | 框架架构与设计理念 |
 | [🚀 快速开始](Books/1-快速开始.md) | 5 分钟快速上手教程 |
 | [🌍 全平台运行](Books/99-各平台运行RunAble.md) | 各平台运行截图展示 |
-| [🤖 AI 开发工作流](Books/AI-Development-Workflow.md) | openspec + tengine-dev AI 开发指南 |
+| [🤖 AI 开发工作流](Books/AI-Development-Workflow.md) | tengine-dev AI 开发指南 |
 
 ### 核心模块文档
 
