@@ -6,6 +6,8 @@ set LUBAN_DLL=%WORKSPACE%/Tools/Luban/Luban.dll
 set CONF_ROOT=.
 set DATA_OUTPATH=%WORKSPACE%/Server/GameConfig 
 set CODE_OUTPATH=%WORKSPACE%/Server/Hotfix/Config/GameConfig
+rem Luban targets net8; allow running on newer installed runtimes (e.g. .NET 10)
+set DOTNET_ROLL_FORWARD=LatestMajor
 
 dotnet %LUBAN_DLL% ^
     -t server^

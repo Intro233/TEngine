@@ -8,6 +8,8 @@ export LUBAN_DLL="${WORKSPACE}/Tools/Luban/Luban.dll"
 export CONF_ROOT="$(pwd)"
 export DATA_OUTPATH="${WORKSPACE}/UnityProject/Assets/AssetRaw/Configs/bytes/"
 export CODE_OUTPATH="${WORKSPACE}/UnityProject/Assets/GameScripts/HotFix/GameProto/GameConfig/"
+# Luban targets net8; allow running on newer installed runtimes (e.g. .NET 10)
+export DOTNET_ROLL_FORWARD=LatestMajor
 
 cp -R "${CONF_ROOT}/CustomTemplate/ConfigSystem.cs" \
    "${WORKSPACE}/UnityProject/Assets/GameScripts/HotFix/GameProto/ConfigSystem.cs"
